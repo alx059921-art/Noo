@@ -1,0 +1,197 @@
+/* ==========================================
+   1. الخطوط والتنسيقات الأساسية
+========================================== */
+@import url('https://googleapis.com');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: #fbf8f7; /* رمادي فاتح مائل للوردي الناعم متناسق مع الموقع الرئيسي */
+    color: #4a3e3d;
+    line-height: 1.8;
+    padding-bottom: 60px;
+}
+
+/* ==========================================
+   2. تنسيق الهيدر (العنوان الرئيسي)
+========================================== */
+header {
+    background-color: #f2f0f0; /* نفس الخلفية الرمادية الفاتحة الممتدة */
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ebdada;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+header h1 {
+    font-size: 2.8rem;
+    color: #4d0c0c; /* اللون العنابي الفاخر */
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #6d5b5a;
+    font-weight: 400;
+}
+
+/* ==========================================
+   3. تصميم الأقسام (Cards Layout)
+========================================== */
+section {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 20px; /* حواف دائرية ناعمة */
+    box-shadow: 0 10px 30px rgba(154, 131, 131, 0.05);
+    text-align: right;
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-3px); /* حركة خفيفة عند التمرير */
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: #2c060e;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+/* خط عنابي صغير مميز تحت العناوين */
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 45px;
+    height: 3px;
+    background: #5a1827;
+    border-radius: 2px;
+}
+
+section p {
+    font-size: 1.05rem;
+    color: #554847;
+    margin-bottom: 15px;
+}
+
+/* ==========================================
+   4. تخصيص القوائم (النقاط والأرقام)
+========================================== */
+section ul, section ol {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+section ul li, section ol li {
+    font-size: 1.05rem;
+    color: #554847;
+    margin-bottom: 12px;
+    padding-right: 5px;
+}
+
+/* تخصيص الكلمات العريضة داخل القوائم */
+section li strong {
+    color: #5a1827;
+}
+
+/* ==========================================
+   5. تنسيق الصور وبطاقة التعارف
+========================================== */
+/* جعل صور ماري كوري تظهر بشكل دائري ناعم وبدون حدود تقليدية */
+section img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px !important; /* استبدال الحدود القديمة بحواف ناعمة */
+    border: none !important; 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    margin: 20px auto;
+    transition: transform 0.4s ease;
+}
+
+section img:hover {
+    transform: scale(1.03);
+}
+
+/* تنسيق نصوص بطاقة التعارف الأولى */
+section p strong {
+    color: #2c060e;
+    display: inline-block;
+    width: 160px; /* ترتيب النصوص بجانب بعضها بشكل متناسق */
+}
+
+/* ==========================================
+   6. الفوتر وزر العودة للموقع
+========================================== */
+footer {
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px 20px;
+    background-color: #f2f0f0;
+    border-top: 1px solid #ebdada;
+}
+
+footer a {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #5a1827; /* زر عنابي فاخر للعودة */
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(90, 24, 39, 0.2);
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+footer a:hover {
+    background-color: #722031;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(90, 24, 39, 0.3);
+}
+
+footer p {
+    font-size: 0.95rem;
+    color: #8c7a79;
+}
+
+/* إخفاء الخطوط الفاصلة القديمة لمظهر أنظف */
+hr {
+    display: none;
+}
+
+/* ==========================================
+   7. التوافق مع الهواتف الذكية (Responsive)
+========================================== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    section {
+        width: 95%;
+        padding: 25px 20px;
+    }
+    
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    section p strong {
+        display: block;
+        width: 100%;
+        margin-bottom: 3px;
+    }
+}

@@ -1,0 +1,620 @@
+/* ==========================================
+   1. الخطوط والتهيئة العصرية الأساسية
+========================================== */
+@import url('https://googleapis.com');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: #5a4545; /* خلفية ناعمة جداً مائلة للوردي البارد */
+    color: #e0d7d6;
+}
+
+/* ==========================================
+   2. هيدر زجاجي فاخر (Glassmorphism Header)
+========================================== */
+.co {
+    background-image: linear-gradient(rgba(244, 233, 233, 0.4), rgba(40, 10, 15, 0.65)), url("Spirit Animal.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    padding: 100px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.053);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif; /* خط كلاسيكي أنيق للعنوان الإنجليزي */
+    font-size: 4.5rem;
+    color: #ffffff; 
+    margin-bottom: 15px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+    font-size: 1.4rem;
+    color: #f5ecec;
+    margin-bottom: 50px;
+    font-weight: 300;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* مجموعة أزرار التنقل */
+.buttons-group {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* الأزرار الدائرية الناعمة */
+.buttons-group .nav-item a.bt {
+    display: inline-block;
+    width: 210px;
+    padding: 14px 25px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px); /* تأثير الضباب الزجاجي الفاخر */
+    -webkit-backdrop-filter: blur(10px);
+    color: #5a1827;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.buttons-group .nav-item a.bt:hover {
+    background-color: #5a1827;
+    color: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(90, 24, 39, 0.25);
+    border-color: #5a1827;
+}
+
+/* تخصيص متميز لزر منظمة المرأة */
+.buttons-group .nav-item:last-child a.bt {
+    background: #5a1827;
+    color: #ffffff;
+    border: 1px solid #5a1827;
+    box-shadow: 0 4px 15px rgba(90, 24, 39, 0.3);
+}
+
+.buttons-group .nav-item:last-child a.bt:hover {
+    background-color: #722031;
+    box-shadow: 0 8px 25px rgba(90, 24, 39, 0.45);
+}
+
+/* ==========================================
+   3. تصميم الأقسام على شكل بطاقات عائمة
+========================================== */
+section {
+    width: 100%;
+    max-width: 100%;
+;
+    margin: 60px auto;
+    padding: 40px 20px;
+    background: #3f0c0c;
+    border-radius: 0; /* حواف دائرية ناعمة جداً */
+    box-shadow: 0 10px 35px rgba(154, 131, 131, 0.06); /* ظلال ناعمة مدمجة */
+    text-align: right;
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+section:hover {
+    transform: translateY(-2px); /* حركة خفيفة عند التفاعل مع القسم */
+}
+
+section h2 {
+    font-size: 2.2rem;
+    color: #060001;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+/* خط تزييني صغير تحت العناوين بدلاً من الخط التقليدي */
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 3px;
+    background: #5a1827;
+    border-radius: 2px;
+}
+
+section p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #dfdada;
+    margin-bottom: 20px;
+}
+
+section ul {
+    list-style: none; /* إزالة النقاط التقليدية */
+    margin-right: 10px;
+}
+
+section ul li {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #f7f3f3;
+    margin-bottom: 12px;
+    position: relative;
+    padding-right: 20px;
+}
+
+/* إضافة نقطة مخصصة وأنيقة للقوائم */
+section ul li::before {
+    content: "✦";
+    position: absolute;
+    right: 0;
+    color: #190207;
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   4. الفواصل الجمالية والاقتباسات التحفيزية
+========================================== */
+center {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    margin: 60px auto;
+    max-width: 850px;
+    padding: 0 20px;
+}
+
+center img {
+    width: 220ox;
+    height: auto;
+    border: 5px solid #060001;
+    border-radius: 12px; /* حواف دائرية ناعمة بدلاً من الدائرة الكاملة لقالب مودرن */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+
+    
+    box-shadow: #060001;
+}
+
+center img:hover {
+    transform: scale(1.05) rotate(1deg);
+}
+
+center h3 {
+    font-size: 1.3rem;
+    color: #5a1827;
+    font-weight: 600;
+    line-height: 1.7;
+    position: relative;
+    padding: 0 15px;
+}
+
+/* ==========================================
+   5. جدول الروتين العصري الأنيق
+========================================== */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px; /* مسافات بين صفوف الجدول لتبدو كبطاقات منفصلة */
+    margin-top: 25px;
+}
+
+th, td {
+    padding: 18px;
+    text-align: right;
+}
+
+th {
+    background-color: #5a1827;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.05rem;
+    border-radius: 8px;
+}
+
+td {
+    background: #fdfbfc;
+    border-top: 1px solid #f5ecee;
+    border-bottom: 1px solid #f5ecee;
+    color: #554847;
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+td:first-child {
+    border-right: 1px solid #f5ecee;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    font-weight: 600;
+    color: #2c060e;
+}
+
+td:last-child {
+    border-left: 1px solid #f5ecee;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+tr:hover td {
+    background: #fff5f6; /* تمييز ناعم وردي عند التمرير */
+    border-color: #ebd3d7;
+}
+
+/* ==========================================
+   6. بطاقات شخصيات الملهمات (Inspirational Cards)
+========================================== */
+#inspiring-women div {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #fdfbfc;
+    border: 1px solid #f5ecee;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    background-image: url("C:\Users\Elite\Desktop\091e4856-2e16-4cdc-be4f-4252963fd4ef.jpeg");
+}
+
+#inspiring-women div:hover {
+    background: #ffffff;
+    box-shadow: 0 8px 25px rgba(90, 24, 39, 0.04);
+    border-color: #ebd3d7;
+}
+
+#inspiring-women h3 a {
+    color: #2c060e;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+#inspiring-women h3 a:hover {
+    color: #5a1827;
+}
+
+#inspiring-women img {
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+#inspiring-women img:hover {
+    transform: scale(1.04);
+}
+
+/* ==========================================
+   7. تنسيق النماذج المدخلات (Form Design)
+========================================== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+label {
+    font-weight: 600;
+    color: #2c060e;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #e2d7d5;
+    background-color: #fdfbfc;
+    border-radius: 12px;
+    font-size: 1rem;
+    color: #4a3e3d;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+    border-color: #5a1827;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(90, 24, 39, 0.07);
+    outline: none;
+}
+
+form button[type="submit"] {
+    background: #5a1827;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px; /* زر إرسال بيضاوي ناعم */
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(90, 24, 39, 0.2);
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+form button[type="submit"]:hover {
+    background-color: #722031;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(90, 24, 39, 0.3);
+}
+
+/* ==========================================
+   8. تحسينات الهواتف المحمولة والتجاوب
+========================================== */
+hr {
+    display: none; /* إخفاء الخطوط التقليدية واستبدالها بالمسافات والظلال لمظهر أنظف */
+}
+
+@media (max-width: 768px) {
+    .buttons-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .buttons-group .nav-item a.bt {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    section {
+        padding: 25px 20px;
+        margin: 40px auto;
+    }
+
+    #inspiring-women div {
+        flex-direction: column; /* تحويل صورة الملهمة والنص لرأسي في الجوال */
+        text-align: center;
+    }
+
+    form button[type="submit"] {
+        width: 100%;
+    }
+    .contact-section {
+    width: 100vw;
+    max-width: 100%;
+    height: auto !important;
+    min-width: 50vh;
+
+    background-color: #f3f0e7; /* نفس لون الخلفية الهادئ المعتمد لمشروعك */
+    padding: 60px 20px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+/* الكلمة العلوية بالإنجليزية */
+.contact-sub {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #8b2626; /* اللون العنابي المعتمد ليعطي لمسة جمالية */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+/* عنوان تواصل معنا العريض */
+.contact-title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+/* الوصف الخاص بالدعم والتواصل */
+.contact-desc {
+    font-size: 16px;
+    color: #555;
+    max-width: 500px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+/* حاوية الأزرار لتصطف بشكل أفقي متناسق */
+.social-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* تضمن ترتيب الأزرار بشكل ممتاز على شاشات الجوال */
+    justify-content: center;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+/* تصميم الأزرار البيضاوية الأنيقة (نفس شكل الصورة) */
+.social-btn {
+    display: inline-block;
+    padding: 10px 28px;
+    border: 1px solid #1a1a1a; /* إطار رفيع داكن */
+    border-radius: 50px;       /* حواف دائرية بالكامل (بيضاوية) */
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+/* تأثير تفاعلي خفيف عند تمرير الماوس فوق الأزرار */
+.social-btn:hover {
+    background-color: #2d0a0a;
+    color: #f3f0e7;
+    transform: translateY(-2px);
+}
+
+/* الخط الفاصل */
+.contact-hr {
+    width: 80%;
+    max-width: 800px;
+    border: 0;
+    border-top: 1px solid #836861;
+    margin-bottom: 30px;
+}
+
+/* الجزء السفلي النهائي */
+/* الشاشات الكبيرة والافتراضية (أجهزة الكمبيوتر والمكتب) */
+/* الحاوية الرئيسية للتذييل بالكامل لضمان الخلفية والاتجاه */
+/* التنسيق العام لقسم التذييل */
+.contact-section {
+    direction: rtl; /* توجيه العناصر من اليمين لليسار ليناسب اللغة العربية */
+    background-color: #4d1717; /* اللون البني الداكن المعتمد في مشروعك */
+    color: #ffffff;
+    padding: 60px 20px 30px 20px;
+    text-align: center; /* توسيط جميع النصوص بشكل افتراضي */
+    font-family: sans-serif; /* يمكنك تغيير الخط لما يناسبك */
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* العنوان الإنجليزي الصغير */
+.contact-sub {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #cca3a3; /* لون فاتح ناعم متناسق مع البني */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* العنوان الرئيسي العريض */
+.contact-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* الوصف التمهيدي */
+.contact-desc {
+    font-size: 16px;
+    color: #e6d9d9;
+    max-width: 600px; /* تحديد عرض النص لكي لا يتمدد بشكل مشوه في الشاشات الواسعة */
+    margin: 0 auto 30px auto; /* توسيط الحاوية بالمنتصف */
+    line-height: 1.6;
+}
+
+/* أزرار وسائل التواصل الاجتماعي */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* السماح للأزرار بالنزول لسطر جديد في الشاشات الصغيرة جداً */
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+/* تنسيق الزر الواحد */
+.social-btn {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.1); /* خلفية شفافة ناعمة */
+    padding: 10px 20px;
+    border-radius: 25px; /* حواف دائرية أنيقة */
+    font-size: 14px;
+    transition: all 0.3s ease; /* تأثير سلس عند مرور الفأرة */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* تأثير عند تمرير الفأرة على الأزرار (Hover) */
+.social-btn:hover {
+    background-color: #ffffff;
+    color: #4d1717; /* تنعكس الألوان ليصبح النص بني والخلفية بيضاء */
+    transform: translateY(-3px); /* تحريك الزر لأعلي قليلاً بشكل تفاعلي */
+}
+
+/* الخط الفاصل الناعم */
+.contact-hr {
+    border: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+/* الجزء السفلي (الحقوق واسم البراند) للشاشات الكبيرة */
+.footer-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* اسم الموقع أقصى اليمين والحقوق أقصى اليسار */
+    align-items: center;
+    max-width: 1200px; /* لضمان عدم تباعدهم بشكل مفرط في الشاشات الضخمة */
+    margin: 0 auto;
+    width: 100%;
+}
+
+.footer-brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+}
+
+.footer-rights {
+    font-size: 13px;
+    color: #cca3a3;
+    margin: 0;
+}
+
+/* ========================================== */
+/* شاشات الهواتف والأجهزة اللوحية (Responsive) */
+/* ========================================== */
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 26px; /* تصغير عنوان تواصل معنا */
+    }
+
+    .contact-desc {
+        font-size: 14px; /* تصغير الوصف المكتوب */
+        padding: 0 10px;
+    }
+
+    .social-buttons {
+        gap: 10px; /* تقريب الأزرار من بعضها في الموبايل */
+    }
+
+    .social-btn {
+        padding: 8px 16px; /* تصغير حجم الأزرار قليلاً */
+        font-size: 13px;
+    }
+
+    .footer-bottom {
+        flex-direction: column; /* تحويل العناصر لتصبح فوق بعضها طوليّاً */
+        gap: 12px;
+        text-align: center;
+    }
+}
+}
